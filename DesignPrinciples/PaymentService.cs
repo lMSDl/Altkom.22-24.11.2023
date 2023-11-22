@@ -8,14 +8,14 @@ namespace Altkom._22_24._11._2023.DesignPrinciples
 {
     public class PaymentService
     {
-        public bool Charge(Customer customer, float amount)
+        public bool Charge(PaymentAccount paymentAccount, float amount)
         {
-            return customer.PaymentAccount.Charge(amount);
+            return paymentAccount.Charge(amount);
         }
 
-        public void Fund(Customer customer, float amount)
+        public void Fund(PaymentAccount paymentAccount, float amount)
         {
-            customer.PaymentAccount.Fund(amount);
+            paymentAccount.Fund(amount);
         }
     }
 } 
