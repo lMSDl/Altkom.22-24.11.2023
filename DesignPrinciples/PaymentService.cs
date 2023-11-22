@@ -8,23 +8,14 @@ namespace Altkom._22_24._11._2023.DesignPrinciples
 {
     public class PaymentService
     {
-        private ICollection<PaymentAccount> PaymentAccounts { get; } = new List<PaymentAccount> { new PaymentAccount(1), new PaymentAccount(2), new PaymentAccount(3), new PaymentAccount(4), new PaymentAccount(5) };
-
-        public bool Charge(int paymentAccountId, float amount)
+        public bool Charge(Customer customer, float amount)
         {
-            PaymentAccount? paymentAccount = FindById(paymentAccountId);
-            return paymentAccount?.Charge(amount) ?? false;
+            return customer.PaymentAccount.Charge(amount);
         }
 
-        public void Fund(int paymentAccountId, float amount)
+        public void Fund(Customer customer, float amount)
         {
-            PaymentAccount? paymentAccount = FindById(paymentAccountId);
-            paymentAccount?.Fund(amount);
-        }
-
-        private PaymentAccount? FindById(int paymentAccountId)
-        {
-            return PaymentAccounts.Where(x => x.Id == paymentAccountId).SingleOrDefault();
+            customer.PaymentAccount.Fund(amount);
         }
     }
-}
+} 
