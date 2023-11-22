@@ -13,33 +13,18 @@ namespace Altkom._22_24._11._2023.DesignPrinciples
         public bool Charge(int paymentAccountId, float amount)
         {
             PaymentAccount? paymentAccount = FindById(paymentAccountId);
-            if (paymentAccount == null)
-                return false;
-
-            if (GetBalance(paymentAccountId) + paymentAccount.AllowedDebit < amount)
-                return false;
-
-            paymentAccount.Outcomes += amount;
-            return true;
+            return paymentAccount?.Charge(amount) ?? false;
         }
 
         public void Fund(int paymentAccountId, float amount)
         {
             PaymentAccount? paymentAccount = FindById(paymentAccountId);
-            if (paymentAccount == null)
-                return;
-            paymentAccount.Incomes += amount;
+            paymentAccount?.Fund(amount);
         }
 
         private PaymentAccount? FindById(int paymentAccountId)
         {
             return PaymentAccounts.Where(x => x.Id == paymentAccountId).SingleOrDefault();
-        }
-
-        public float? GetBalance(int paymentAccountId)
-        {
-            PaymentAccount? paymentAccount = FindById(paymentAccountId);
-            return paymentAccount?.Incomes - paymentAccount?.Outcomes;
         }
     }
 }
