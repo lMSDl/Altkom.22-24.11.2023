@@ -1,6 +1,28 @@
 ﻿
 
 using Altkom._22_24._11._2023.DesignPrinciples;
+using Altkom._22_24._11._2023.SOLID.L;
+
+
+
+int a = 4;
+int b = 9;
+
+var rectangle = CreateRectangle(a, b); 
+
+
+Console.WriteLine( $"{a} * {b} = {rectangle.Area}" );
+
+
+
+
+
+Rectangle CreateRectangle(int a, int b)
+{
+    return new Square() { A = a, B = b };
+}
+
+
 
 CustomerService customerService = new CustomerService();
 PaymentService paymentService = new PaymentService();
