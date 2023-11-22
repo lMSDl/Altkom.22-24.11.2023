@@ -1,6 +1,6 @@
 ﻿
 
-using Altkom._22_24._11._2023.DesignPatterns.Creational.Builder;
+using Altkom._22_24._11._2023.DesignPatterns.Creational.FactoryMethod;
 using Altkom._22_24._11._2023.DesignPrinciples;
 using Altkom._22_24._11._2023.SOLID.L;
 
