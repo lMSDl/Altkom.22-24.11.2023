@@ -25,6 +25,11 @@ namespace Altkom._22_24._11._2023.DesignPatterns.Creational.Builder
 
             Console.WriteLine(vehicle);
 
+            vehicleBuilder.SetEngine(50);
+
+            Console.WriteLine(vehicle);
+
+
             vehicle = new Vehicle() { Doors = 4, TrunkCapacity = 500, EnginePower = 100, Seats = 4, Wheels = 4 };
 
             Console.WriteLine(vehicle);
