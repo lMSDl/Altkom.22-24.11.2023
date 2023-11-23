@@ -20,4 +20,4 @@ namespace Altkom._22_24._11._2023.DesignPatterns.Structural.Adapter.II
         }
     }
 }
-}
+
