@@ -36,11 +36,15 @@ namespace Altkom._22_24._11._2023.DesignPatterns.Creational.Builder
 
 
             vehicle = new VehicleBuilder()
-                                    .SetWeels(4)
-                                    .SetSeats(5)
-                                    .SetDoors(4)
-                                    .SetEngine(100)
-                                    .SetTrunk(500)
+                                        .SetWeels(4)
+                                        .SetSeats(5)
+                                     .Info
+                                        .SetManufacturer("Altkom")
+                                        .SetYear(2009)
+                                     .Parts
+                                        .SetDoors(4)
+                                        .SetEngine(100)
+                                        .SetTrunk(500)
                                     .Build();
 
             Console.WriteLine(vehicle);

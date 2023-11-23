@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Altkom._22_24._11._2023.DesignPatterns.Creational.Builder
 {
-    internal class VehicleBuilder
+    internal class VehicleBuilder : VehicleBuilderFacade
     {
-        private Vehicle Vehicle { get; }
-        public VehicleBuilder()
+
+        public VehicleBuilder(Vehicle vehicle) : base(vehicle)
         {
-            Vehicle = new Vehicle();
         }
 
+        public VehicleBuilder()
+        {
+        }
 
         public VehicleBuilder SetWeels(int wheels)
         {
@@ -39,11 +41,6 @@ namespace Altkom._22_24._11._2023.DesignPatterns.Creational.Builder
         {
             Vehicle.TrunkCapacity = capacity;
             return this;
-        }
-
-        public Vehicle Build()
-        {
-            return (Vehicle)Vehicle.Clone();
         }
     }
 }
