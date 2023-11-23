@@ -1,6 +1,6 @@
 ﻿
 
-using Altkom._22_24._11._2023.DesignPatterns.Creational.ObjectPool;
+using Altkom._22_24._11._2023.DesignPatterns.Structural.Adapter.I;
 using Altkom._22_24._11._2023.DesignPrinciples;
 using Altkom._22_24._11._2023.SOLID.L;
 
@@ -37,6 +37,6 @@ static void SOLID()
 
     Rectangle CreateRectangle(int a, int b)
     {
-        return new Square() { A = a, B = b };
+        return new Altkom._22_24._11._2023.SOLID.L.Square() { A = a, B = b };
     }
 }
