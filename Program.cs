@@ -1,6 +1,6 @@
 ﻿
 
-using Altkom._22_24._11._2023.DesignPatterns.Structural.Flyweight;
+using Altkom._22_24._11._2023.DesignPatterns.Behavioral.ChainOfResponsibility.II;
 using Altkom._22_24._11._2023.DesignPrinciples;
 using Altkom._22_24._11._2023.SOLID.L;
 
